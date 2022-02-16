@@ -1,0 +1,55 @@
+﻿@model AdvancedRepository.Models.CustomerModel
+
+@{
+    ViewBag.Title = "Ekle";
+}
+
+
+@using (Html.BeginForm())
+{
+@Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group col-md-2">
+        @Html.LabelFor(x => x.Customers.CustomerID)
+        @Html.EditorFor(x => x.Customers.CustomerID, new { htmlAttributes = new { @class = "form-control " } })
+    </div>
+    <div class="form-group col-md-2">
+        @Html.LabelFor(x => x.Customers.CompanyName)
+        @Html.EditorFor(x => x.Customers.CompanyName, new { htmlAttributes = new { @class = "form-control " } })
+    </div>
+    <div class="form-group col-md-2">
+        @Html.LabelFor(x => x.Customers.ContactName)
+        @Html.EditorFor(x => x.Customers.ContactName, new { htmlAttributes = new { @class = "form-control " } })
+    </div>
+
+    <div class="form-group col-md-2">
+        @Html.LabelFor(x => x.Customers.Phone)
+        @Html.EditorFor(x => x.Customers.Phone, new { htmlAttributes = new { @class = "form-control " } })
+    </div>
+    <div class="form-group col-md-2">
+        @Html.LabelFor(x => x.Customers.City)
+        @Html.EditorFor(x => x.Customers.City, new { htmlAttributes = new { @class = "form-control " } })
+    </div>
+    <div class="form-group col-md-2">
+        @Html.LabelFor(x => x.Customers.Address)
+        @Html.EditorFor(x => x.Customers.Address, new { htmlAttributes = new { @class = "form-control " } })
+    </div>
+    <div class="form-group col-md-2">
+        @Html.LabelFor(x => x.Customers.Country)
+        @Html.EditorFor(x => x.Customers.Country, new { htmlAttributes = new { @class = "form-control " } })
+    </div>
+
+    <div class="form-group col-md-2">
+        @Html.LabelFor(x => x.Customers.PostalCode)
+        @Html.EditorFor(x => x.Customers.PostalCode, new { htmlAttributes = new { @class = "form-control " } })
+    </div>      <div class="form-group">
+        <br />
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Oluştur" class="btn btn-success" /> &nbsp;&nbsp;
+            @Html.ActionLink("Listeye Geri Dön", "Index", null, new { @class = "btn btn-primary" })
+        </div>
+    </div>
+</div>}

@@ -1,0 +1,40 @@
+﻿@model AdvancedRepository.Models.CustomerModel
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<div>
+    <h3>CUSTOMERS</h3>
+    <dl>
+        <dt>@Html.DisplayNameFor(x => x.Customers.CustomerID)</dt>
+        <dd>@Html.DisplayFor(x => x.Customers.CustomerID)</dd>
+
+        <dt>@Html.DisplayNameFor(x => x.Customers.CompanyName)</dt>
+        <dd>@Html.DisplayFor(x => x.Customers.CompanyName)</dd>
+
+        <dt>@Html.DisplayNameFor(x => x.Customers.ContactName)</dt>
+        <dd>@Html.DisplayFor(x => x.Customers.ContactName)</dd>
+
+        <dt>@Html.DisplayNameFor(x => x.Customers.Phone)</dt>
+        <dd>@Html.DisplayFor(x => x.Customers.Phone)</dd>
+
+        <dt>@Html.DisplayNameFor(x => x.Customers.City)</dt>
+        <dd>@Html.DisplayFor(x => x.Customers.City)</dd>
+
+        <dt>@Html.DisplayNameFor(x => x.Customers.Address)</dt>
+        <dd>@Html.DisplayFor(x => x.Customers.Address)</dd>
+
+        <dt>@Html.DisplayNameFor(x => x.Customers.Country)</dt>
+        <dd>@Html.DisplayFor(x => x.Customers.Country)</dd>
+
+        <dt>@Html.DisplayNameFor(x => x.Customers.PostalCode)</dt>
+        <dd>@Html.DisplayFor(x => x.Customers.PostalCode)</dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Listeye Geri Dön", "Index", null, new { @class = "btn btn-primary" })
+</p>
+
+

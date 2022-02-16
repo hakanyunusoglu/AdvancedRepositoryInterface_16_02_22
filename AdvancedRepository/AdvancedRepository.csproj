@@ -97,6 +97,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Models\NorthwindContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -113,6 +114,8 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Business\MyRepositories.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -122,6 +125,7 @@
     <Compile Include="Models\CustomerDemographics.cs">
       <DependentUpon>NorthwindContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\CustomerModel.cs" />
     <Compile Include="Models\Customers.cs">
       <DependentUpon>NorthwindContext.tt</DependentUpon>
     </Compile>
@@ -187,6 +191,14 @@
       <DependentUpon>NorthwindContext.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\Detail.cshtml" />
+    <Content Include="Views\Customer\Ekle.cshtml" />
+    <Content Include="Views\Customer\Update.cshtml" />
+    <Content Include="Views\Customer\Choose.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -196,7 +208,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
