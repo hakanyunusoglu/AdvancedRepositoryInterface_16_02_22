@@ -18,6 +18,5 @@ namespace AdvancedRepository.Repository
         List<T> Listele();
         void Ekle(T entity);
         IQueryable<T> GenelListe();
-
     }
 }

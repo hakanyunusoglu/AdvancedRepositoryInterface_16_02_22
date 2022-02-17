@@ -38,7 +38,7 @@ namespace AdvancedRepository.Controllers
             if (ModelState.IsValid)
             {
                 Customers c = new Customers();
-                c.CustomerID = model.Customers.CustomerID;
+                c.CustomerID = model.Customers.CustomerID.ToUpper();
                 c.CompanyName = model.Customers.CompanyName;
                 c.ContactName = model.Customers.ContactName;
                 c.Phone = model.Customers.Phone;
